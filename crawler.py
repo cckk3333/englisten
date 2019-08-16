@@ -50,7 +50,8 @@ def download(word, directory, dictionary):
     else:
         raise NotImplementedError
 
-    os.rename(fpath, os.path.join(directory, fpath))
+    if fpath:
+        os.rename(fpath, os.path.join(directory, fpath))
 
 
 def main():
